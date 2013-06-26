@@ -65,20 +65,17 @@ function register_basicslider_post_type() {
 
 function OutputBasicSlider(){
 SliderJS();
-echo ' <!--  Outer wrapper for presentation only, this can be anything you like -->
-      <div id="banner-fade">
-
-        <!-- start Basic Jquery Slider -->
-        <ul class="bjqs">
-          <li><img src="http://placehold.it/350x150" title="Automatically generated caption"></li>
-          <li><img src="http://placehold.it/350x151" title="Automatically generated caption"></li>
-          <li><img src="http://placehold.it/350x152" title="Automatically generated caption"></li>
-        </ul>
-        <!-- end Basic jQuery Slider -->
-
-      </div>
-      <!-- End outer wrapper -->
-';
+echo '<div id="banner-fade"><ul class="bjqs">';
+$x=0;
+query_posts('showposts=6&post_type=basicslider');
+while (have_posts()) : the_post();
+$x++;
+echo '<li>';
+the_post_thumbnail(array(620,320),array('title' => get_the_title()));
+echo '</li>';
+endwhile;
+echo '</ul></div><!-- End outer wrapper -->';
+wp_reset_query();
 }
 add_shortcode('BasicSlider','OutputBasicSlider');
 ?>
