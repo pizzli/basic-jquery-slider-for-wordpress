@@ -1,5 +1,5 @@
 === Basic jQuery Slider For Wordpress ===
-Contributors: pizzli, jcobb
+Contributors: pizzli
 Donate link: http://pizzli.com/donate.php
 Tags: slider, jqueryslider, jquery slider, jquery
 Requires at least: 3.0.1
