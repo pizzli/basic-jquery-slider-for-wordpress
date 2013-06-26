@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Basic jQuery Slider For Wordpress
-Plugin URI: http://pizzli.com/pluginbox/basic-jquery-slider/
+Plugin Name: Basic jQuery Slider For WordPress
+Plugin URI: http://wordpress.org/plugins/basic-jquery-slider
 Description: A basic jQuery Slider For WordPress
 Version: 1.0
 Author: Alexander C. Block
