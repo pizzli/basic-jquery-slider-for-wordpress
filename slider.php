@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Basic Jquery Slider For Wordpress
-Plugin URI: http://pizzli.com
-Description: A basic Jquery Slider For WordPress
+Plugin Name: Basic jQuery Slider For Wordpress
+Plugin URI: http://pizzli.com/pluginbox/basic-jquery-slider/
+Description: A basic jQuery Slider For WordPress
 Version: 1.0
 Author: Alexander C. Block
 Author URI: http://pizzli.com
@@ -58,8 +58,8 @@ function register_basicslider_post_type() {
 			'singular_name' => _x('BasicSlider', 'post type singular name')
 		),
 		'public' => true,
-		'menu_icon' => get_stylesheet_directory_uri().'img/movie_icon.png',
-		'supports'      => array( 'title', 'editor', 'thumbnail')
+		'menu_icon' => plugins_url('img/film_icon.png',__FILE__),
+		'supports'      => array( 'title', 'thumbnail')
 	));
 }
 

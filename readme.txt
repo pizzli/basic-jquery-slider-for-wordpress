@@ -1,4 +1,4 @@
-=== Basic Jquery Slider For Wordpress ===
+=== Basic jQuery Slider For Wordpress ===
 Contributors: pizzli, jcobb
 Donate link: http://pizzli.com/donate.php
 Tags: slider, jqueryslider, jquery slider, jquery
@@ -8,10 +8,10 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A basic Jquery Slider For WordPress
+A basic jQuery Slider For WordPress
 == Description ==
 
-Basic Jquery Slider For Wordpress is a basic Jquery Slider For WordPress
+Basic jQuery Slider For Wordpress is a basic jQuery Slider For WordPress
 
 
 == Installation ==
@@ -24,7 +24,7 @@ Basic Jquery Slider For Wordpress is a basic Jquery Slider For WordPress
 == Frequently Asked Questions ==
 
 = Can I add captions to my slides? =
-Yes, you can add captions by using entering your caption as the post text.
+Yes, the title of your post will be the caption used on each slider image.
 
 == Screenshots ==
 1. screenshot-1.png
