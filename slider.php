@@ -24,14 +24,14 @@ License: GPLv2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-function AddScripts(){
+function AddBJQSScripts(){
 wp_register_script('bjqs-js', plugins_url('/js/bjqs-1.3.min.js',__FILE__));
 wp_register_style('bjqs-stylesheet', plugins_url('/css/bjqs.css',__FILE__));
 wp_enqueue_script('jquery');
 wp_enqueue_script('bjqs-js');
 wp_enqueue_style('bjqs-stylesheet');
 }
-add_action( 'wp_enqueue_scripts', 'AddScripts' );
+add_action( 'wp_enqueue_scripts', 'AddBJQSScripts' );
 
 function SliderJS(){
 echo "<script class='secret-source'>
@@ -44,5 +44,18 @@ j(document).ready(function($) {
           });
         });
       </script>";
+}
+
+add_action('init', 'register_basicslider_post_type');
+function register_basicslider_post_type() {
+	register_post_type('BasicSlider',array(
+		'labels' => array(
+			'name' => _x('BasicSlider', 'post type general name'),
+			'singular_name' => _x('BasicSlider', 'post type singular name')
+		),
+		'public' => true,
+		'menu_icon' => get_stylesheet_directory_uri().'img/movie_icon.png',
+		'supports'      => array( 'title', 'editor', 'thumbnail')
+	));
 }
 ?>
