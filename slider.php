@@ -23,4 +23,26 @@ License: GPLv2
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+
+function AddScripts(){
+wp_register_script('bjqs-js', plugins_url('/js/bjqs-1.3.min.js',__FILE__));
+wp_register_style('bjqs-stylesheet', plugins_url('/css/bjqs.css',__FILE__));
+wp_enqueue_script('jquery');
+wp_enqueue_script('bjqs-js');
+wp_enqueue_style('bjqs-stylesheet');
+}
+add_action( 'wp_enqueue_scripts', 'AddScripts' );
+
+function SliderJS(){
+echo "<script class='secret-source'>
+var j = jQuery.noConflict();
+j(document).ready(function($) {
+          j('#banner-fade').bjqs({
+            height      : 320,
+            width       : 620,
+            responsive  : true
+          });
+        });
+      </script>";
+}
 ?>
